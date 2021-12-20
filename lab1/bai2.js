@@ -3,7 +3,6 @@ function createNumber(){
     let b= document.getElementById("numB");
     a =parseInt(a.value)
     b =parseInt(b.value)
-    let container = document.querySelector("container");
     if (numA.value.length==0||numB.value.length==0){
         alert("Chưa nhập số má ơi");
         return false;
