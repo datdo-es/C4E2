@@ -1,0 +1,8 @@
+.time-style{
+    font-size: 140px;
+    color: #fff;
+    padding: 10px;
+}
+.time-style p {
+    text-shadow: 5px 5px 10px #000000;
+}

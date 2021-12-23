@@ -1,12 +1,10 @@
 function numberOneTriangle(){
-    let row = parseInt(document.getElementById("row").value);
-    console.log(row)
-    for(let i=0; i<row;i++){
-        for(j = 1; j <= i; j++){
-            result.innerText="1";
-        }
-        result.innerText="1"
-        result.innerHTML=("<br>")
+    let row = document.getElementById("row");
+    let result= document.getElementById("result")
+    let numb = parseInt(row.value)
+    let number ='';
+    for(let i=0; i<=numb;i++){
+        number += 1;
+        result.innerHTML += `<br> ${number}`
     }
 }
-document.getElementById("start").addEventListener("click",numberOneTriangle());

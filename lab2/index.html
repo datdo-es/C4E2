@@ -4,31 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Bài 1</title>
+    <title>Máy tính cơ bản</title>
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col text-center p-2"><h3>Đây là toàn bộ bài tập</h3></div>
-            <div class="col-12 text-center pb-3">
-                <a type="button" class="btn btn-success" href="bai1.html">Bài 1</a>
-                <a type="button" class="btn btn-success" href="bai2.html">Bài 2</a>
-                <a type="button" class="btn btn-success" href="bai3.html">Bài 3</a>
-                <a type="button" class="btn btn-success" href="bai4.html">Bài 4</a>
-                <a type="button" class="btn btn-success" href="index.html">Bài tính toán</a>
-            </div>
-        </div>
-    </div>
-    <div class="container">
         <div class="col-12 p-5">
-            <h1 class="text-center">Tìm số chẳn từ 4 đến 20 ngẫu nhiên</h1>
+            <h1 class="text-center">Bảng tính cơ bản</h1>
             <form action="">
+                <div class="form-group">
+                    <label>Số thứ nhất</label>
+                    <input type="number" class="form-control" id="numA" name="numA" placeholder="Số thứ nhất">
+                </div>
+                <div class="form-group">
+                    <label>Số thứ hai</label>
+                    <input type="number" class="form-control" id="numB" name="numB" placeholder="Số thứ hai">
+                </div>
+                <div class="col-12 text-center">
+                    <button type="button" class="btn btn-primary" id="cong" >Cộng</button>
+                    <button type="button" class="btn btn-secondary" id="tru">Trừ</button>
+                    <button type="button" class="btn btn-outline-info" id="nhan">Nhân</button>
+                    <button type="button" class="btn btn-success" id="chia">Chia</button>
+                    <button type="button" class="btn btn-danger" id="clear">Clear</button>
+                </div>
                 <div class="col-12 text-center"><h1 id="result"></h1></div>
             </form>
         </div>
     </div>
-    <script type="module" src="./js/bai1.js"></script>
+    <script type="module" src="./js/index.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
