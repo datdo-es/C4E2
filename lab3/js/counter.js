@@ -46,14 +46,14 @@ class Counter{
     handleclear=()=>{
         this.handleStop();
         this.$label.innerText = '00:00'
-        this.counter = 0
+        this.$counter=0;
     }
     render(){
         this.$container.append(this.$label,this.$btnStart, this.$btnStop,this.$btnClear);
         return this.$container;
     }
 }
-class stopAll extends Counter{
+class clearAll extends Counter{
     $btnStopAll;
     constructor(id){
         super(id)
@@ -66,6 +66,7 @@ class stopAll extends Counter{
         let butttonCreated = document.querySelectorAll(".stop")
         for(let i = 0; i <butttonCreated.length; i++){
             butttonCreated[i].click()
+            this.$counter=0;
         }
     }
     render(){
@@ -92,6 +93,5 @@ class startAll extends Counter{
         this.$container.append(this.$btnStartAll)
         return this.$container
     }
-
 }
-export default {Counter,startAll,stopAll}
+export default {Counter,startAll,clearAll}
