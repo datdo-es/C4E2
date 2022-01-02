@@ -22,7 +22,7 @@ class InputComponent{
         this.label.innerText = label
 
         this.input = document.createElement("input");
-        this.input.classList.add("label-input","form-control");
+        this.input.classList.add("label-input","form-control","mb-2","mt-2");
         this.input.type=type;
         this.input.id = id;
         this.input.name=name;
