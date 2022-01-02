@@ -52,9 +52,8 @@ export const isValid = (str) => {
         name = name.replace(/đ/g, "d");
         return name;
     }
-    console.log(str)
     console.log(removeAscent(str))
-    if (str==false){return "Tên chưa được điền"}
-    if (str==true){return null}
-    return re.test(removeAscent(str))
+    if (!str||str.length==0){return "Tên chưa được điền"}
+    if (!re.test()){return "Tên không hợp lệ"}
+    return null
 }

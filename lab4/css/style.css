@@ -53,3 +53,18 @@ body{
   border-radius: 8px;
   border: burlywood 1px solid;
 }
+.forny-inner {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+}
+.mail{
+  padding: 0;
+  margin: 0;
+}
+.mail h1{
+  font-size: 40px;
+  font-weight: 700;
+  padding: 20px;
+}

@@ -79,7 +79,7 @@ class Register{
             isError = true
         }
         if(!isError){
-            console.log("Dang ký thanh cong")
+            window.location="././attention.html";
         }
     }
     render(){
