@@ -30,6 +30,7 @@ body{
 }
 .label-input {
     line-height: 60px;
+    padding: 10px;
 }
 .label-text{
   color: #2d2d2d;
@@ -44,4 +45,11 @@ body{
 }
 .row{
   margin: 0;
+}
+.error{
+  font-size: 15px;
+  padding: 10px;
+  margin: 0;
+  border-radius: 8px;
+  border: burlywood 1px solid;
 }

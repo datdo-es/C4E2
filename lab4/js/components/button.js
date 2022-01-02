@@ -6,7 +6,7 @@ class ButtonComponent{
         this.btn.innerText = text;
         this.btn.classList.add(...classList);
         if (callback){
-            this.btn.addEventListener("clicl", callback);
+            this.btn.addEventListener("click", callback);
         }
     }
     render(){

@@ -44,9 +44,11 @@ class LoginScreen{
         const {email, password} = e.target;
         let isError =false;
         if(checkEmail(email.value)!== null){
+            this.email.setError(checkEmail(email.value))
             isError = true;
         }
         if(checkPassword(password.value)!==null){
+            this.password.setError(checkPassword(password.value))
             isError = true;
         }
         if(!isError){

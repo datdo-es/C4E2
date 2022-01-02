@@ -28,12 +28,18 @@ class InputComponent{
         this.input.name=name;
 
         this.error = document.createElement("div");
-        this.error.classList.add("mt-2","error");
+        this.error.classList.add("mt-2","mb-2","error","d-none");
     }
-    
+    setError(msg){
+        this.error.innerText= msg;
+        this.error.classList.remove("d-none")
+        this.error.classList.add("alert-warning")
+    }
+
     render(){
-        this.container.append(this.label,this.containerInput);
+        this.container.append(this.label,this.containerInput,this.error);
         this.containerInput.append(this.input,this.error)
+        this.error.classList.add("d-none")
         return this.container
     }
 }
