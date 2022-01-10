@@ -1,6 +1,7 @@
 import ButtonComponent from "../../components/button.js";
 import InputComponent from "../../components/input.js";
 import LoginScreen from "../login/index.js";
+import CheckEmailScreen from "../checkEmail/index.js";
 import {checkEmail, checkPassword, checkRepassword, isValid, check2Password} from "../../common/validation.js";
 import app from "../../index.js";
 import { createNewAccount } from "../../firebase/auth.js";
@@ -68,8 +69,11 @@ class Register{
         const login = new LoginScreen();
         app.changeActiveScreen(login);
     };
-
-    handleSubmit = (e)=>{
+    setLoading() {
+        this.btnSubmit.render().innerText = "";
+        this.btnSubmit.render().innerHTML = `<div class="loader"></div>`;
+    }
+    handleSubmit = async (e)=>{
         e.preventDefault();
         const {name,email,password,repassword} = e.target;
         let isError =false;
@@ -94,7 +98,10 @@ class Register{
             isError = true
         }
         if(!isError){
-            createNewAccount(email.value, password.value);
+            this.setLoading();
+            await createNewAccount(email.value, password.value);
+            const checkEmail = new CheckEmailScreen();
+            app.changeActiveScreen(checkEmail);
         }
     }
     render(){

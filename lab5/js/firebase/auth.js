@@ -4,12 +4,12 @@ const config= {
     handleCodeInApp:true,
 };
 const createNewAccount = (email,password) =>{
-    firebase
+    return firebase
     .auth()
     .createUserWithEmailAndPassword(email,password)
     .then((userCredential)=>{
         let user = userCredential.user;
-        user.sendEmailVerification(config);
+        return user.sendEmailVerification(config);
     })
     .catch((error)=>{
         let errorCode = error.code;

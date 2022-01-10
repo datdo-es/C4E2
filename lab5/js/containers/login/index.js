@@ -55,7 +55,7 @@ class LoginScreen{
         const signUp = new Register();
         app.changeActiveScreen(signUp);
     };
-
+    
     handleSubmit = (e)=>{
         e.preventDefault();
         const {email, password} = e.target;
