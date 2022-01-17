@@ -1,8 +1,9 @@
 import ButtonComponent from "../../components/button.js";
 import InputComponent from "../../components/input.js";
 import { getCurrentUser } from "../../firebase/auth.js";
-import { createUser, getUserByEmail } from "../../firebase/store.js";
+import { createUser, getUserByEmail, updateUser } from "../../firebase/store.js";
 import {isValid, checkNumber} from "../../common/validation.js";
+import MainScreen from "../adminPage/index.js"
 
 class InfoScreen {
   container;
@@ -117,7 +118,13 @@ class InfoScreen {
       this.imageUrl.setError("Đường dẫn ảnh của bạn không hợp lệ")
       isError = true;
     }
-
+    // Nhập thành công thì chuyển đến trang chính adminPage
+    if(!isError){
+      const userEnter = await updateUser(user.email, name.value, phone.value, imageUrl.value)
+      const mainScreen = new MainScreen();
+      app.changeActiveScreen(mainScreen);
+  }
+    // Xử lý update 
   };
 
   render(appEle) {
