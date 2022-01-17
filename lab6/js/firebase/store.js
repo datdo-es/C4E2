@@ -38,5 +38,23 @@ async function getUserByEmail(email) {
     _noti.error(errorCode, errorMessage);
   }
 }
-
-export { createUser, getUserByEmail };
+// /Update Homework/
+async function updateUser(email, name, phone, imageUrl) {
+  try {
+      const userID = await getUserStoreID(email)
+      await db
+          .collection("users")
+          .doc(userID)
+          .update({
+              name,
+              phone,
+              imageUrl,
+          });
+  } catch (error) {
+      let errorCode = error.code;
+      let errorMessage = error.message;
+      _noti.error(errorCode, errorMessage);
+  }
+}
+// /End Homework/
+export { createUser, getUserByEmail, updateUser };
