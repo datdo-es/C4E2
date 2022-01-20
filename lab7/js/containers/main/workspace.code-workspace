@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\..\\..\\..\\Downloads\\New folder\\New folder"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\Downloads\\lab8"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\Downloads\\lab81\\lab8"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\C4E-2"
+		},
+		{
+			"path": "..\\..\\..\\.."
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\Downloads\\material-dashboard-master\\material-dashboard-master"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Lab-II"
+	}
+}
